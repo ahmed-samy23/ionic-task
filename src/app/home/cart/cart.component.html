@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    عربة التسوق
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    
+    <ion-item *ngFor="let prodcut of cartList; index as i">
+      <ion-avatar slot="start">
+        <img src="{{prodcut?.image}}">
+      </ion-avatar>
+      <ion-label>
+        {{prodcut?.description}}
+        <ion-row>
+          <ion-col>
+            <p><span> ({{prodcut?.size}})</span></p>
+            <p>
+              {{prodcut?.price}} <span>ج.م</span>
+            </p>
+          </ion-col>
+          <ion-col>
+            <ion-row class="added">
+              <ion-col size="4">
+                <ion-buttons class="ion-justify-content-center">
+                  <ion-button class="quantity" (click)="reduceOrRemoveFromCart(i)">
+                    <ion-icon slot="icon-only" name="remove"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </ion-col>
+              
+              <ion-col style="padding: 0px;">
+                <p class="quantityNum">{{prodcut?.quantity}}</p>
+              </ion-col>
+  
+              <ion-col size="4">
+                <ion-buttons class="ion-justify-content-center">
+                  <ion-button class="quantity" (click)="increaseQuantity(i)">
+                    <ion-icon slot="icon-only" name="add"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col><p>الحساب الكلي</p></ion-col>
+    <ion-col><p style="text-align: end !important;">{{totalPrice| number:'.2'}} ج.م</p></ion-col>
+  </ion-row>
+  <ion-button expand="block" shape="round" [disabled]="cartList.length == 0">إتمام الشراء</ion-button>
+</ion-footer>

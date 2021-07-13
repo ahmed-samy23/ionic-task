@@ -1,0 +1,45 @@
+  ion-toolbar {
+    font-family: system-ui;
+  }
+  ion-item {
+    --inner-border-width: 0 0 0px 0;
+  }
+  ion-footer {
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
+  }
+  ion-footer ion-row{
+    font-family: system-ui;
+  }
+  ion-footer ion-row ion-col p{
+    margin: 0;
+  }
+  ion-footer ion-button{
+    --background: var(--primary);
+  }
+
+.added{
+    align-items: center;
+    .quantity{
+      --background: var(--color4);
+      width: 35px;
+      height: 35px;
+      color: var(--primary);
+    }
+    .quantityNum {
+      text-align: center !important;
+      background: var(--color3);
+      border-radius: 16px;
+      padding: 4px;
+    }
+  }
+  p{
+    color: black;
+    text-align: start !important;
+    font-size: 14px;
+    font-family: system-ui;
+    font-weight: bold;
+    span{
+      color: var(--color1);
+    }
+  }

@@ -1,0 +1,125 @@
+ion-slides {
+  padding-inline-start: 4px;
+}
+ion-slides ion-slide{
+  width: 88px; height: 80px;
+}
+ion-slides ion-slide ion-note{
+  position: absolute;
+  bottom: 9px;
+  right: 12px;
+  color: #FFFFFF;
+}
+ion-slides ion-slide ion-img{
+  pointer-events:none
+}
+ion-slide ion-skeleton-text{
+  width: 100%;
+  height: 70px;
+}
+.items ion-skeleton-text{
+  width: 100%;
+  height: 250px;
+  margin: 0;
+}
+ion-footer{
+  background: white;
+}
+ion-footer ion-row {
+  text-align: center;
+  align-items: center;
+}
+ion-footer ion-row .centerCol{
+  border-left: 1px solid var(--color2) !important;
+  border-right: 1px solid var(--color2) !important;
+}
+
+ion-footer ion-row .header{
+  color: var(--color1);
+  font-size: 12px;
+  font-family: system-ui;
+  font-weight: bold;
+  margin: 0;
+}
+ion-footer ion-row .content{
+  color: black;
+  margin: 0;
+  font-size: 14px;
+  font-family: system-ui;
+  font-weight: bold;
+}
+ion-footer ion-row ion-buttons{
+  justify-content: center;
+}
+ion-footer ion-row ion-buttons ion-button{
+  color: var(--color1);
+}
+ion-footer ion-row ion-buttons ion-badge{
+  background: var(--primary);
+  position: absolute;
+  top: 0px;
+  right: 22%;
+  border-radius: 25px;
+}
+
+.sectionItems {
+  background: var(--color3);
+  margin-top: 10px;
+  ion-card{
+    margin: 0px;
+    height: 250px;
+    box-shadow: 0px 0px 0px 0px !important;
+  }
+  .items{
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-inline-start: 7px;
+  padding-inline-end: 7px;
+  img{
+    height: 80px;
+    width: 70px;
+  }
+  p{
+    color: black;
+    text-align: start !important;
+    font-size: 14px;
+    font-family: system-ui;
+    font-weight: bold;
+    span{
+      color: var(--color1);
+    }
+  }
+  .add{
+    margin: 6px;
+    margin-bottom: 11px;
+    position: absolute;
+    bottom: 0;
+    width: 94%;
+    .addButton{
+      --background: var(--primary);
+      font-size: 12px;
+      font-family: system-ui;
+    }
+  }
+  .subTitle{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .added{
+      .quantity{
+        --background: var(--color4);
+        width: 39px;
+        height: 39px;
+        color: var(--primary);
+      }
+      .quantityNum {
+        text-align: center !important;
+        background: var(--color3);
+        border-radius: 16px;
+        padding: 4px;
+      }
+    }
+  }
+  
+}
+}

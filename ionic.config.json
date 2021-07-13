@@ -1,0 +1,7 @@
+{
+  "name": "healthy and tasty",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
